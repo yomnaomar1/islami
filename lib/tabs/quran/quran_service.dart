@@ -351,7 +351,7 @@ static  List<String> englishSuraNames = [
     '6'
   ];
 
-static List<Sura> suras=List.generate(
+static List<Sura> suraSearchResults=List.generate(
   114, 
   (index) => getSuraFromIndex(index)
   );
@@ -364,4 +364,19 @@ static Sura getSuraFromIndex(int index)=> Sura
  );
 
  static Future <String> loadSuraFile (int suraNum)=> rootBundle.loadString("assets/text/$suraNum.txt");
+
+ static void searchSura(String value){
+ suraSearchResults.clear();
+
+  for(int i=0; i<114 ; i++){
+
+    if(arabicSuraNames[i].contains(value) || englishSuraNames[i].toLowerCase().contains(value.toLowerCase()) ){
+     Sura sura=getSuraFromIndex(i);
+     suraSearchResults.add(sura);
+
+    }
+    
+  }
+
+ }
 }
