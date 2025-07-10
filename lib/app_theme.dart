@@ -8,12 +8,30 @@ class AppTheme {
 
     static ThemeData lightTheme=ThemeData();
     static ThemeData darkTheme=ThemeData(
-      primaryColor:primary,
+       primaryColor:primary,
+
+      scaffoldBackgroundColor: black,
+
+      appBarTheme: AppBarTheme(
+       backgroundColor: black,
+       foregroundColor: primary,
+       centerTitle: true,
+       titleTextStyle: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+        color: primary,
+       )
+      ),
+     
+
+
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         type: BottomNavigationBarType.fixed,
         backgroundColor: primary,
         showUnselectedLabels: false,
       ),
+
+
       textTheme: TextTheme(
         headlineSmall:TextStyle(
           fontSize: 24,
