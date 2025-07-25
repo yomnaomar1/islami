@@ -52,6 +52,11 @@ class AppTheme {
           fontSize: 14,
           fontWeight: FontWeight.bold,
           color: white,
+        ),
+         displaySmall: TextStyle(
+          fontSize: 36,
+          fontWeight: FontWeight.bold,
+          color: white,
         )
       ),
 
